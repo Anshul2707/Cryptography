@@ -108,8 +108,14 @@ void decrypt(int n, string str)
                 }
                 else
                 {   quo=n/9;
-                    finalstr=finalstr+dictionarynum[(9*quo)+i-n];
-                    k=k+1;
+		    	if(quo==0)
+                    	{	finalstr=finalstr+dictionarynum[9+i-n];
+                    		k=k+1;
+			}
+		    	else
+			{	finalstr=finalstr+dictionarynum[(9*quo)+i-n];
+                    		k=k+1;
+			}
                 }
             }
         }
