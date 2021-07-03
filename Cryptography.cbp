@@ -66,6 +66,7 @@ void decrypt(int n, string str)
     char dictionary1[]={'\0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     char dictionarynum[]={'\0','1','2','3','4','5','6','7','8','9'};
     int k=0;
+    int quo=0;
     std::string finalstr;
     for (auto x : str)
     {   k=0;
@@ -106,8 +107,8 @@ void decrypt(int n, string str)
                     k=k+1;
                 }
                 else
-                {
-                    finalstr=finalstr+dictionarynum[9+i-n];
+                {   quo=n/9;
+                    finalstr=finalstr+dictionarynum[(9*quo)+i-n];
                     k=k+1;
                 }
             }
