@@ -1,4 +1,4 @@
-#include <iostream.h>
+
 using namespace std;
 void encrypt (int n, string str)
 {
